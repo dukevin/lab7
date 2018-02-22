@@ -2,15 +2,7 @@
 
 <html>
 <head>
-	<title>HCI Project Portfolio</title>	
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="/css/introHCI.css" rel="stylesheet">
-  
-</head>
-<!-- Google Analytics Content Experiment code -->
+	<!-- Google Analytics Content Experiment code -->
 <script>function utmx_section(){}function utmx(){}(function(){var
 k='170309920-0',d=document,l=d.location,c=d.cookie;
 if(l.search.indexOf('utm_expid='+k)>0)return;
@@ -24,6 +16,14 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
 </script><script>utmx('url','A/B');</script>
 <!-- End of Google Analytics Content Experiment code -->
+	<title>HCI Project Portfolio</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/introHCI.css" rel="stylesheet">
+  
+</head>
 <body>
 	<div class="container">
 		<div class="jumbotron">
@@ -61,6 +61,21 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
   gtag('js', new Date());
 
   gtag('config', 'UA-114621549-1');
+  $(document).ready(function(){
+  	$(".likeBtn").click(function() {
+		ga("create", "UA-114621549-1", "auto");
+		if($(this).hasClass("btn-default"))
+		{
+			ga("send", "event", 'like', 'click');
+		}
+		if($(this).hasClass("minBtn"))
+		{
+			ga("send", "event", 'likeAlt', 'click');
+		}
+	});
+  	
+  })
+
 </script>
 
 </body>

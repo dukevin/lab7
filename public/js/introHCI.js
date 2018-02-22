@@ -9,5 +9,15 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	// your code here
+	$(".likeBtn").click(function(){
+		ga("send", "event", 'like', 'click');
+		if($(this).hasClass("btn-default"))
+		{
+
+		}
+		if($(this).hasClass("minBtn"))
+		{
+			
+		}
+	})
 }
